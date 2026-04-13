@@ -144,7 +144,15 @@ ___
 ---
 ### Step👍:6
 ___
+#### Configure Alertmanager + alert rules
 
+##### Install the Alertmanager
+
+          wget https://github.com/prometheus/alertmanager/releases/download/v0.27.0/alertmanager-0.27.0.linux-amd64.tar.gz
+          tar xvf alertmanager-0.27.0.linux-amd64.tar.gz
+          sudo mv alertmanager-0.27.0.linux-amd64 /opt/alertmanager
+###### Alertmanager config — sends alerts to Slack
+          sudo nano /opt/alertmanager/alertmanager.yml
 ---
 ### Step👍:7
 ___
