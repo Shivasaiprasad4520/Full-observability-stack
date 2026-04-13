@@ -82,6 +82,21 @@ ___
 ---
 ### Step👍:4
 ___
+#### Create a sample Python app with /metrics endpoint
+
+Install Python and depended packages
+
+         sudo apt install python3-pip -y
+         pip3 install prometheus_client flask
+         
+write python file sample_app.py 
+
+         nano~/sample_app.py
+         
+then execute the file
+
+         python3 ~/sample_app.py &
+         curl http://localhost:8000/metrics
 
 ---
 ### Step👍:5
