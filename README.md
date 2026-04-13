@@ -55,6 +55,7 @@ ___
          sudo systemctl status promethueus
 
 ###### Test: Open browser -> http://EC2_IP Address:9090
+
 ---
 ### Step👍:3
 ___
