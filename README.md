@@ -101,7 +101,46 @@ then execute the file
 ---
 ### Step👍:5
 ___
+#### Install Grafana
 
+         sudo apt install -y apt-transport-https software-properties-common wget
+         wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+         echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
+         sudo apt update && sudo apt install grafana -y
+         sudo systemctl enable grafana-server
+         sudo systemctl start grafana-server
+
+###### Test: Login: http://YOUR_EC2_IP:3000 — default user: admin / password: admin
+
+##### Add Prometheus as data source in Grafana UI
+
+         Grafana → Connections → Data sources → Add → Prometheus
+         URL: http://localhost:9090
+         Click: Save & test → should show green "Data source is working"
+         
+##### Import a pre-built Node Exporter dashboard
+
+         Grafana → Dashboards → Import
+         Dashboard ID: 1860    (Node Exporter Full — most popular)
+         Select Prometheus as data source → Import
+         
+##### Create custom app dashboard — add these panels manually
+
+         Panel 1 — Total requests (Stat panel)
+           Query: sum(app_requests_total)
+
+         Panel 2 — Request rate per second (Time series)
+           Query: rate(app_requests_total[5m])
+
+         Panel 3 — Error rate % (Gauge panel)
+           Query: rate(app_errors_total[5m]) / rate(app_requests_total[5m]) * 100
+
+         Panel 4 — Active users (Time series)
+           Query: app_active_users
+
+         Panel 5 — p95 request latency (Time series)
+           Query: histogram_quantile(0.95, rate(app_request_latency_seconds_bucket[5m]))
+           
 ---
 ### Step👍:6
 ___
