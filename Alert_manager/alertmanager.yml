@@ -1,0 +1,15 @@
+global:
+  slack_api_url: 'YOUR_SLACK_WEBHOOK_URL'
+
+route:
+  receiver: 'slack-alerts'
+  group_wait: 10s
+  group_interval: 5m
+  repeat_interval: 1h
+
+receivers:
+  - name: 'slack-alerts'
+    slack_configs:
+      - channel: '#devops-alerts'
+        title: 'Alert: {{ .GroupLabels.alertname }}'
+        text: '{{ range .Alerts }}{{ .Annotations.description }}{{ end }}'
