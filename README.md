@@ -175,3 +175,22 @@ ___
 ---
 ### Step👍:7
 ___
+#### Test everything end-to-end
+
+##### Stress test to trigger CPU alert
+
+          sudo apt install stress -y
+          stress --cpu 2 --timeout 180    # spikes CPU for 3 min — should trigger alert
+          
+##### Verify alert fired in Prometheus UI
+
+          http://YOUR_EC2_IP:9090/alerts   # should show HighCPUUsage in FIRING state
+          http://YOUR_EC2_IP:9093          # Alertmanager UI — shows active alerts
+
+##### Load test your app to generate metrics
+
+sudo apt install apache2-utils -y
+ab -n 1000 -c 10 http://localhost:8000/
+(# Then check your Grafana dashboard — you'll see request rate spike)
+
+
