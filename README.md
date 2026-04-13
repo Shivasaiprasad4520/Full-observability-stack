@@ -151,8 +151,27 @@ ___
           wget https://github.com/prometheus/alertmanager/releases/download/v0.27.0/alertmanager-0.27.0.linux-amd64.tar.gz
           tar xvf alertmanager-0.27.0.linux-amd64.tar.gz
           sudo mv alertmanager-0.27.0.linux-amd64 /opt/alertmanager
+          
+###### Get free Slack webhook: Create Slack workspace → Apps → Incoming Webhooks → add to channel → copy URL.
+
 ###### Alertmanager config — sends alerts to Slack
+
           sudo nano /opt/alertmanager/alertmanager.yml
+
+###### Create alert rules file
+
+          sudo nano /opt/prometheus/alert_rules.yml
+          
+###### Create alert service file
+
+          sudo nano /etc/systemd/system/alertmanager.service
+          
+###### start the service file
+
+          sudo systemctl daemon-reload
+          sudo systemctl enable alertmanager
+          sudo systemctl start alertmanager
+
 ---
 ### Step👍:7
 ___
