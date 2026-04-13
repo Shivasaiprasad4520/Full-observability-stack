@@ -66,7 +66,19 @@ ___
         sudo mv node_exporter-1.7.0.linux-amd64/node_exporter /usr/local/bin/
 
         sudo useradd --no-create-home --shell /bin/false node_exporter
+
+##### Create node_exporter.service
+
+        sudo nano /etc/systemd/system/node_exporter.service
         
+##### Start the exporter service
+
+        sudo systemctl daemon-reload
+        sudo systemctl enable node_exporter
+        sudo systemctl start node_exporter
+        
+###### Test: Open browser -> http://EC2_IP Address:9100/metrics
+
 ---
 ### Step👍:4
 ___
