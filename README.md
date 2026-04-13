@@ -1,7 +1,7 @@
 # Full-observability-stack
 
 ## Full observability stack using Prometheus + Grafana + Alertmanager
-===
+
 Architecture of Full Observability-stack
 
 <img width="1440" height="656" alt="image" src="https://github.com/user-attachments/assets/c7e604bd-5cb3-43c9-a715-5ae3f6a45631" />
@@ -40,7 +40,21 @@ ___
        sudo chown -R prometheus:prometheus /opt/prometheus   
 
 ##### Create Prometheus.yml config
+
          sudo nano/opt/prometheus/prometheus.yml
+
+##### Create systemd service so Prometheus auto-starts
+
+         sudo nano/etc/systemd/system/prometheus.service
+         
+##### Start the prometheus services
+
+         sudo systemctl daemon-reload
+         sudo systemctl enable prometheus
+         sudo systemctl start prometheus
+         sudo systemctl status promethueus
+
+###### Test: Open browser -> http://EC2_IP Address:9090
 ---
 ### Step👍:3
 ___
