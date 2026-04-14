@@ -1,0 +1,14 @@
+[Unit]
+Description=Alertmanager
+After=network.target
+
+[Service]
+User=ubuntu
+ExecStart=/opt/alertmanager/alertmanager \
+  --config.file=/opt/alertmanager/alertmanager.yml \
+  --storage.path=/opt/alertmanager/data
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
