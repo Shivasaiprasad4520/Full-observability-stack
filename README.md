@@ -57,6 +57,7 @@ ___
          sudo systemctl status promethueus
 
 ###### Test: Open browser -> http://EC2_IP Address:9090
+
 <img width="1440" height="619" alt="image" src="https://github.com/user-attachments/assets/057b5a23-7266-47e7-9ffa-13057183cf3b" />
 
 
@@ -96,20 +97,34 @@ ___
 Install Python and depended packages
 
          sudo apt install python3-pip -y
+         sudo apt install python3-venv -y
+         python3 -m venv myenv
+         source myenv/bin/activate
          pip3 install prometheus_client flask
          
 write python file sample_app.py 
 
          nano~/sample_app.py
          
-then execute the file
+then execute the file and call curl in separate teriminal
 
          python3 ~/sample_app.py &
          curl http://localhost:8000/metrics
          
          <img width="608" height="127" alt="image" src="https://github.com/user-attachments/assets/92800df5-a938-4633-949b-e5e66e85dce0" />
+___
 
+systemD file to enable and execute outside of envinorment : systemd service file OUTSIDE the virtual environment
 
+write a service file for python in home directory
+
+        sudo nano /etc/systemd/system/flask-app.service
+        sudo systemctl daemon-reload
+        sudo systemctl enable flask-app
+        sudo systemctl start flask-app
+        sudo systemctl status flask-app
+        curl http://localhost:8000/metrics
+        
 ---
 ### Step👍:5
 ___
@@ -139,7 +154,7 @@ ___
          Dashboard ID: 1860    (Node Exporter Full — most popular)
          Select Prometheus as data source → Import
 
-         <img width="1396" height="809" alt="image" src="https://github.com/user-attachments/assets/71c71dd7-09b1-4a22-a2d3-bd39754db47e" />
+<img width="1396" height="809" alt="image" src="https://github.com/user-attachments/assets/71c71dd7-09b1-4a22-a2d3-bd39754db47e" />
 
 ##### Create custom app dashboard — add these panels manually
 
@@ -158,7 +173,7 @@ ___
          Panel 5 — p95 request latency (Time series)
            Query: histogram_quantile(0.95, rate(app_request_latency_seconds_bucket[5m]))
 
-    <img width="1105" height="698" alt="image" src="https://github.com/user-attachments/assets/bd8e07ff-0428-4809-90e9-1c91948f1d94" />
+<img width="1105" height="698" alt="image" src="https://github.com/user-attachments/assets/bd8e07ff-0428-4809-90e9-1c91948f1d94" />
     
 
 ---
