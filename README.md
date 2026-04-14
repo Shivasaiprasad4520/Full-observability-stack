@@ -222,6 +222,9 @@ ___
 ##### Verify alert fired in Prometheus UI
 
           http://YOUR_EC2_IP:9090/alerts   # should show HighCPUUsage in FIRING state
+
+<img width="1434" height="414" alt="image" src="https://github.com/user-attachments/assets/4deb9fc4-6982-4c45-b1f4-e6efc8f6039c" />
+
           http://YOUR_EC2_IP:9093          # Alertmanager UI — shows active alerts
 
 ##### Load test your app to generate metrics
