@@ -111,7 +111,7 @@ then execute the file and call curl in separate teriminal
          python3 ~/sample_app.py &
          curl http://localhost:8000/metrics
          
-         <img width="608" height="127" alt="image" src="https://github.com/user-attachments/assets/92800df5-a938-4633-949b-e5e66e85dce0" />
+<img width="608" height="127" alt="image" src="https://github.com/user-attachments/assets/92800df5-a938-4633-949b-e5e66e85dce0" />
 ___
 
 systemD file to enable and execute outside of envinorment : systemd service file OUTSIDE the virtual environment
@@ -123,8 +123,11 @@ write a service file for python in home directory
         sudo systemctl enable flask-app
         sudo systemctl start flask-app
         sudo systemctl status flask-app
- search in browser       
+
+search in browser    
+
         http://EC2_IP add:8000
+        
 <img width="1440" height="354" alt="image" src="https://github.com/user-attachments/assets/c6e7d8e5-88fe-4c22-b4d9-261f2fd48e5b" />
         
 ---
