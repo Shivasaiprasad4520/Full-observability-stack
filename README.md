@@ -12,6 +12,7 @@ ___
 #### Launch EC2 Instance with Following Inbound Rules
 <img width="1239" height="636" alt="image" src="https://github.com/user-attachments/assets/dfef67c7-aba7-4f54-8aa1-771959b4bfe3" />
 
+
        Port 22       - SSH
        Port 9090     - Prometheus
        Port 3000     - Grafana
@@ -56,6 +57,8 @@ ___
          sudo systemctl status promethueus
 
 ###### Test: Open browser -> http://EC2_IP Address:9090
+<img width="1440" height="619" alt="image" src="https://github.com/user-attachments/assets/057b5a23-7266-47e7-9ffa-13057183cf3b" />
+
 
 ---
 ### Step👍:3
