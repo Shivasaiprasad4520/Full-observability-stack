@@ -1,0 +1,12 @@
+[Unit]
+Description=Flask App with Prometheus
+After=network.target
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu
+ExecStart=/home/ubuntu/projectenv/bin/python /home/ubuntu/sample_app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
