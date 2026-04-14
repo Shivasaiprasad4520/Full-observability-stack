@@ -121,6 +121,9 @@ ___
 
 ###### Test: Login: http://YOUR_EC2_IP:3000 — default user: admin / password: admin
 
+<img width="1429" height="769" alt="image" src="https://github.com/user-attachments/assets/74c7dc6d-93cd-4146-a20b-6f204435ffc5" />
+
+
 ##### Add Prometheus as data source in Grafana UI
 
          Grafana → Connections → Data sources → Add → Prometheus
