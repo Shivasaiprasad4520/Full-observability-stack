@@ -157,9 +157,10 @@ ___
 
          Panel 5 — p95 request latency (Time series)
            Query: histogram_quantile(0.95, rate(app_request_latency_seconds_bucket[5m]))
-           
-    <img width="1077" height="722" alt="image" src="https://github.com/user-attachments/assets/dd8d8913-58b4-4070-bae0-4c88406e5c80" />
-       
+
+    <img width="1105" height="698" alt="image" src="https://github.com/user-attachments/assets/bd8e07ff-0428-4809-90e9-1c91948f1d94" />
+    
+
 ---
 ### Step👍:6
 ___
