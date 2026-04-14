@@ -123,7 +123,9 @@ write a service file for python in home directory
         sudo systemctl enable flask-app
         sudo systemctl start flask-app
         sudo systemctl status flask-app
-        curl http://localhost:8000/metrics
+ search in browser       
+        http://EC2_IP add:8000
+<img width="1440" height="354" alt="image" src="https://github.com/user-attachments/assets/c6e7d8e5-88fe-4c22-b4d9-261f2fd48e5b" />
         
 ---
 ### Step👍:5
