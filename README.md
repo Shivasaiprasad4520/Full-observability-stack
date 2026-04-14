@@ -194,6 +194,9 @@ ___
           
 ###### Get free Slack webhook: Create Slack workspace → Apps → Incoming Webhooks → add to channel → copy URL.
 
+
+<img width="1428" height="712" alt="image" src="https://github.com/user-attachments/assets/5473e184-a9d8-40aa-bf41-07695c314316" />
+
 ###### Alertmanager config — sends alerts to Slack
 
           sudo nano /opt/alertmanager/alertmanager.yml
