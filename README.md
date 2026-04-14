@@ -83,6 +83,11 @@ ___
         
 ###### Test: Open browser -> http://EC2_IP Address:9100/metrics
 
+<img width="1440" height="321" alt="image" src="https://github.com/user-attachments/assets/15660a4a-9b80-44ca-bdb9-6bebf9c0cfc1" />
+
+<img width="790" height="759" alt="image" src="https://github.com/user-attachments/assets/79d5c1db-35e9-470d-af61-eebe9e4b93b0" />
+
+
 ---
 ### Step👍:4
 ___
