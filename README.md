@@ -224,10 +224,15 @@ ___
 
 ##### Load test your app to generate metrics
 
-sudo apt install apache2-utils -y
+          sudo apt install apache2-utils -y
 
-ab -n 1000 -c 10 http://localhost:8000/
+          ab -n 1000 -c 10 http://localhost:8000/
 
 (# Then check your Grafana dashboard — you'll see request rate spike)
+<img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/c843cc13-21be-405d-8ad6-2d5906eb1e7e" />
+
+<img width="1087" height="742" alt="image" src="https://github.com/user-attachments/assets/cc751d8a-9a96-4575-a76e-46059d122f45" />
+
+<img width="1110" height="714" alt="image" src="https://github.com/user-attachments/assets/b0dbf6cd-0445-4fb2-a8bb-bd926becb83c" />
 
 
