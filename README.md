@@ -235,8 +235,13 @@ ___
           sudo apt install apache2-utils -y
 
           ab -n 1000 -c 10 http://localhost:8000/
+          
+##### wantedly breaked down the app to witness the slack alert notification    
+
+<img width="1440" height="716" alt="image" src="https://github.com/user-attachments/assets/226102b8-87b5-40b9-886f-81a3a4578bfb" />
 
 (# Then check your Grafana dashboard — you'll see request rate spike)
+
 <img width="1430" height="766" alt="image" src="https://github.com/user-attachments/assets/c843cc13-21be-405d-8ad6-2d5906eb1e7e" />
 
 <img width="1087" height="742" alt="image" src="https://github.com/user-attachments/assets/cc751d8a-9a96-4575-a76e-46059d122f45" />
