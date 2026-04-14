@@ -106,6 +106,9 @@ then execute the file
 
          python3 ~/sample_app.py &
          curl http://localhost:8000/metrics
+         
+         <img width="608" height="127" alt="image" src="https://github.com/user-attachments/assets/92800df5-a938-4633-949b-e5e66e85dce0" />
+
 
 ---
 ### Step👍:5
@@ -155,6 +158,8 @@ ___
          Panel 5 — p95 request latency (Time series)
            Query: histogram_quantile(0.95, rate(app_request_latency_seconds_bucket[5m]))
            
+    <img width="1077" height="722" alt="image" src="https://github.com/user-attachments/assets/dd8d8913-58b4-4070-bae0-4c88406e5c80" />
+       
 ---
 ### Step👍:6
 ___
