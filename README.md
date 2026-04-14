@@ -135,7 +135,9 @@ ___
          Grafana → Dashboards → Import
          Dashboard ID: 1860    (Node Exporter Full — most popular)
          Select Prometheus as data source → Import
-         
+
+         <img width="1396" height="809" alt="image" src="https://github.com/user-attachments/assets/71c71dd7-09b1-4a22-a2d3-bd39754db47e" />
+
 ##### Create custom app dashboard — add these panels manually
 
          Panel 1 — Total requests (Stat panel)
