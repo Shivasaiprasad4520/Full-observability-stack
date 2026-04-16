@@ -254,6 +254,9 @@ ___
 
 ===
 
-In this Project i have spinned the EC2 instance with Volume 
+In this Project i have spinned the EC2 instance with low Volume i faced a Issue
+-
+
+In the middle of Provisioning of grafana the disk is fulled
 
 
