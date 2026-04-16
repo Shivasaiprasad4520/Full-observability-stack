@@ -252,3 +252,8 @@ ___
 <img width="1110" height="714" alt="image" src="https://github.com/user-attachments/assets/b0dbf6cd-0445-4fb2-a8bb-bd926becb83c" />
 
 
+===
+
+In this Project i have spinned the EC2 instance with Volume 
+
+
