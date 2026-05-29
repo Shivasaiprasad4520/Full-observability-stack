@@ -7,7 +7,7 @@ Architecture of Full Observability-stack
 <img width="1440" height="656" alt="image" src="https://github.com/user-attachments/assets/c7e604bd-5cb3-43c9-a715-5ae3f6a45631" />
 
 ---
-### Step👍:1
+### Step👍:1 
 ___
 #### Launch EC2 Instance with Following Inbound Rule
 
