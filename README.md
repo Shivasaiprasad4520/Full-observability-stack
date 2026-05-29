@@ -19,7 +19,7 @@ ___
        Port 3000     - Grafana
        Port 9100     - Node Exporter
        Port 9093     - Alertmanager
-       Port 8000     - Sample app
+       Port 8000     - Sample app 
 
 change modification 400 to the keypair
 
