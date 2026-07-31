@@ -1,0 +1,8 @@
+name: test-work
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: build
+        run: echo "building ${{ vars.HOME}}"
